@@ -1,7 +1,7 @@
 # main.py - стартовый модуль проекта
  
 # Импорты из модуля
-from functions import *
+from finction import *
 
 # Функция запуска импортированных функций
 def main():
@@ -22,6 +22,5 @@ def main():
       df.to_excel(writer, index=False)
       writer.close()  # Используем close() вместо save()
 # Инициализационный скрипт
-if name == "main":
+if __name__ == "__main__":
     main()
-    
