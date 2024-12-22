@@ -1,6 +1,5 @@
 
 # func.py - модуль для импорта функций для решения задачи
-# TODO Добавить импорты внешних зависимостей
 import pandas as pd
 from openpyxl import load_workbook
 
