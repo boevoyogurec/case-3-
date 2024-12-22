@@ -10,3 +10,9 @@ if phone_column_name not in df.columns:
 else:
     # Очищаем номера телефонов
     df[phone_column_name] = df[phone_column_name].apply(clean_phone_number)
+
+    # Сохраняем результат в новый файл
+    output_file = 'cleaned_phones.xlsx'
+    writer = pd.ExcelWriter(output_file, engine='openpyxl')
+    df.to_excel(writer, index=False)
+    writer.close()  # Используем close() вместо save()
